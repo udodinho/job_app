@@ -26,7 +26,7 @@ const getJob = async (req, res) => {
 }
 
 const updateJob = async (req, res) => {
-    const {body: { company, position }, user: { userId }, params: { _id: jobId }} = req
+    const {body: { company, position }, user: { userId }, params: { id: jobId }} = req
 
     if ( company === "" || position === "") {
         throw new BadRequestError("Company and Position fields cannot be empty")
